@@ -1,0 +1,7 @@
+<details>
+	<summary><i>i18nSelect</i> pipe demo</summary>
+	<div>{{gender | i18nSelect: inviteMap}}</div>
+	<select (change)="setGender($event)">
+		<option *ngFor="let key of keys" >{{key}}</option>
+	</select>
+</details>

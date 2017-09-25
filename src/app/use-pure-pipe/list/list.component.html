@@ -1,0 +1,29 @@
+<details>
+    <summary>Use pure pipes demo</summary>
+    Priority: <select #priority>
+      <option>High</option>
+      <option selected>Normal</option>
+      <option>Low</option>
+    </select>
+    Action: <input 
+      type="text" 
+      #action 
+      (keyup.enter)="addTask(action.value, priority.value); action.value=''"
+      placeholder="Enter action">
+    
+    <button (click)="reset()">Reset</button>
+
+    <h5>High Priority Tasks</h5>
+    <ul>
+      <li *ngFor="let task of (tasks | priority: 'High')">
+        {{task.action}} - {{task.priority}}
+      </li>
+    </ul>
+
+    <h5>All Tasks</h5>
+    <ul>
+      <li *ngFor="let task of tasks">
+        {{task.action}} - {{task.priority}}
+      </li>
+    </ul>
+</details>
