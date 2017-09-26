@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NumberPipeComponent {
 
-  pi: number = 3.141592;
-  e: number = 2.718281828459045;
+  pi = 3.141592;
+  e = 2.718281828459045;
 
 }
