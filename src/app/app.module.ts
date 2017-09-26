@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { DepricatedPipesModule } from './deprecated-pipes/deprecated-pipes.module';
+
 import { AppComponent } from './app.component';
 
 import {
@@ -44,7 +46,8 @@ import { AgePipe } from './use-pipe-in-code/age.pipe';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    DepricatedPipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
