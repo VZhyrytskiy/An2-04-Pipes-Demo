@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { AgePipe } from './../age.pipe';
 import { DatePipe } from '@angular/common';
 
+// > Using a different locale than the default one (en-US)
+// requires to load additional locale data:
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/uk';
-
 registerLocaleData(localeFr);
+// <
 
 @Component({
   selector: 'app-use-pipe',
@@ -14,13 +16,15 @@ registerLocaleData(localeFr);
   providers: [AgePipe]
 })
 export class UsePipeComponent implements OnInit {
-  currentDay: string = new DatePipe('uk').transform(new Date(), 'MMMM dd, y', 'uk');
+  currentDay: string = new DatePipe('uk').transform(
+    new Date(),
+    'MMMM dd, y',
+    'uk'
+  );
   currentAge: string;
   age: number;
 
-  constructor(
-    private agePipe: AgePipe
-  ) {}
+  constructor(private agePipe: AgePipe) {}
 
   ngOnInit() {
     this.getAge({ name: 'Anna', age: 16 });
@@ -28,8 +32,6 @@ export class UsePipeComponent implements OnInit {
   }
 
   getAge(person) {
-      this.currentAge = this.agePipe.transform(person.age);
+    this.currentAge = this.agePipe.transform(person.age);
   }
-
-
 }
