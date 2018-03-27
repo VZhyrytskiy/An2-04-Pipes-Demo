@@ -1,53 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
-import { DepricatedPipesModule } from './deprecated-pipes/deprecated-pipes.module';
 
 import { AppComponent } from './app.component';
 
-import {
-  AsyncObservablePipeComponent,
-  CurrencyPipeComponent,
-  DatePipeComponent,
-  I18nPluralPipeComponent,
-  I18nSelectPipeComponent,
-  JsonPipeComponent,
-  LowerUpperCasePipeComponent,
-  NumberPipeComponent,
-  PercentPipeComponent,
-  SlicePipeComponent
-} from './built-in-pipes';
-
-import { UsePipeComponent } from './use-pipe-in-code/use-pipe/use-pipe.component';
-import { ListComponent } from './use-pure-pipe/list/list.component';
-import { PriorityPipe } from './use-pure-pipe/priority.pipe';
-import { AgePipe } from './use-pipe-in-code/age.pipe';
+import { BuiltInPipesModule } from './01-built-in-pipes/built-in-pipes.module';
+import { DepricatedPipesModule } from './02-deprecated-pipes/deprecated-pipes.module';
+import { UsePipeInCodeModule } from './03-use-pipe-in-code/use-pipe-in-code.module';
+import { UsePurePipeModule } from './04-use-pure-pipe/use-pure-pipe.module';
+import { UsePipeResultModule } from './05-use-pipe-result/use-pipe-result.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LowerUpperCasePipeComponent,
-    DatePipeComponent,
-    JsonPipeComponent,
-    NumberPipeComponent,
-    CurrencyPipeComponent,
-    PercentPipeComponent,
-    I18nPluralPipeComponent,
-    I18nSelectPipeComponent,
-    SlicePipeComponent,
-    AsyncObservablePipeComponent,
-    UsePipeComponent,
-    ListComponent,
-    PriorityPipe,
-    AgePipe
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,
-    DepricatedPipesModule
+
+    BuiltInPipesModule,
+    DepricatedPipesModule,
+    UsePipeInCodeModule,
+    UsePurePipeModule,
+    UsePipeResultModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

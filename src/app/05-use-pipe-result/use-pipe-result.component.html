@@ -1,0 +1,24 @@
+<details>
+    <summary>use pipe result demo</summary>
+    <input [(ngModel)]="search">
+
+    <!-- Incorrect
+        Pipe 'Filter' runs twice -->
+    <div *ngFor="let item of (items | filter: search)">
+      {{item}} 
+    </div>
+    <p>Count: <b>{{(items | filter: search).length}}</b></p>
+
+    <!-- Correct
+        Variable result is scoped to the hosting HTML element and its children,
+        so we use ng-container to make it visible to <p> elment
+    -->
+    <ng-container *ngIf="(items | filter: search) as result">
+      <div *ngFor="let item of result">
+        {{item}} 
+      </div>
+      <p>Count: <b>{{result.length}}</b></p>
+    </ng-container>
+</details>
+
+
