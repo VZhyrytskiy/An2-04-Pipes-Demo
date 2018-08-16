@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class LowerUpperCasePipeComponent {
   value: string;
-  
-  change(value: string) { 
-  	this.value = value; 
+
+  change(value: string) {
+    this.value = value;
   }
 }

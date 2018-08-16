@@ -5,7 +5,7 @@
     <!-- Incorrect
         Pipe 'Filter' runs twice -->
     <div *ngFor="let item of (items | filter: search)">
-      {{item}} 
+      {{item}}
     </div>
     <p>Count: <b>{{(items | filter: search).length}}</b></p>
 
@@ -15,7 +15,7 @@
     -->
     <ng-container *ngIf="(items | filter: search) as result">
       <div *ngFor="let item of result">
-        {{item}} 
+        {{item}}
       </div>
       <p>Count: <b>{{result.length}}</b></p>
     </ng-container>
