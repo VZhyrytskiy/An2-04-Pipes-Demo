@@ -4,6 +4,7 @@ export * from './date-pipe/date-pipe.component';
 export * from './i18n-plural-pipe/i18n-plural-pipe.component';
 export * from './i18n-select-pipe/i18n-select-pipe.component';
 export * from './json-pipe/json-pipe.component';
+export * from './key-value-pipe/key-value-pipe.component';
 export * from './lower-upper-case-pipe/lower-upper-case-pipe.component';
 export * from './number-pipe/number-pipe.component';
 export * from './percent-pipe/percent-pipe.component';

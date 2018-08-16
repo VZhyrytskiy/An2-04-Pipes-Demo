@@ -1,0 +1,24 @@
+<details>
+  <summary><i>keyvalue</i> pipe demo</summary>
+  <p>
+    Original Object: {{rows | json}}
+  </p>
+
+  <p>Default sort: alphabetical order (Unicode point value)</p>
+  <div *ngFor="let row of rows | keyvalue">
+    {{ row | json }}
+    {{row.key}}: {{row.value}}
+  </div>
+
+  <p>Map:</p>
+  <div *ngFor="let row of rowsMap | keyvalue">
+    {{ row | json }}
+    {{row.key}}: {{row.value}}
+  </div>
+
+  <p>Object + Comparator</p>
+  <div *ngFor="let row of rows | keyvalue: compareFn">
+    {{ row | json }}
+    {{row.key}}: {{row.value}}
+  </div>
+</details>
