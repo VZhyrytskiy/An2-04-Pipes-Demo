@@ -8,18 +8,16 @@ import { Observable, Subscriber } from 'rxjs';
   styleUrls: ['./async-observable-pipe.component.css']
 })
 export class AsyncObservablePipeComponent {
-
   // observable
   time = new Observable<string>((observer: Subscriber<string>) => {
     setInterval(() => observer.next(new Date().toString()), 1000);
   });
 
   // promise
-  data: Promise<string> = <Promise<string>>(new Promise((resolve, reject) => {
+  data: Promise<string> = <Promise<string>>new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('RECEIVED DATA!');
       // reject('Error');
     }, 5000);
-  }).catch(error => error));
-
+  }).catch(error => error);
 }

@@ -19,10 +19,10 @@ export class ListComponent {
     }
 
     // mutate array
-    // this.tasks.push({ action: action, priority: priority });
+    this.tasks.push({ action: action, priority: priority });
 
     // create new rference
-    this.tasks = [...this.tasks, { action: action, priority: priority }];
+    // this.tasks = [...this.tasks, { action: action, priority: priority }];
   }
 
   reset() {

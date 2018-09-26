@@ -5,8 +5,8 @@ import { DatePipe } from '@angular/common';
 // > Using a different locale than the default one (en-US)
 // requires to load additional locale data:
 import { registerLocaleData } from '@angular/common';
-import localeFr from '@angular/common/locales/uk';
-registerLocaleData(localeFr);
+import localeUk from '@angular/common/locales/uk';
+registerLocaleData(localeUk);
 // <
 
 @Component({
