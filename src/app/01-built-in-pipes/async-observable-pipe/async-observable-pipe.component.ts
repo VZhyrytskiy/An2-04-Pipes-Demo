@@ -17,8 +17,8 @@ export class AsyncObservablePipeComponent {
   // promise
   data: Promise<string> = <Promise<string>>(new Promise((resolve, reject) => {
     setTimeout(() => {
-      // resolve('RECEIVED DATA!');
-      reject('Error');
+      resolve('RECEIVED DATA!');
+      // reject('Error');
     }, 5000);
   }).catch(error => error));
 
