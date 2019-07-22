@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class JsonPipeComponent {
 
-  person: Object = {
+  person: object = {
     firstName: 'Anna',
     lastName: 'Vasileva',
     children: [

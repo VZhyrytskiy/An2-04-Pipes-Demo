@@ -6,6 +6,7 @@ import { DemoComponent } from './demo.component';
   imports: [
     CommonModule,
     // import deprecated module after!
+    // tslint:disable-next-line: deprecation
     DeprecatedI18NPipesModule
   ],
   declarations: [DemoComponent],

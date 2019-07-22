@@ -12,20 +12,20 @@ export class ListComponent {
     { action: 'Task 3', priority: 'Low' }
   ];
 
-  addTask(action, priority) {
+  onAddTask(action: string, priority: string) {
     action = action.trim();
     if (!action) {
       return;
     }
 
     // mutate array
-    this.tasks.push({ action: action, priority: priority });
+    this.tasks.push({ action, priority });
 
     // create new rference
-    // this.tasks = [...this.tasks, { action: action, priority: priority }];
+    // this.tasks = [...this.tasks, { action, priority }];
   }
 
-  reset() {
+  onReset() {
     this.tasks = [];
   }
 }

@@ -5,13 +5,13 @@
       <option selected>Normal</option>
       <option>Low</option>
     </select>
-    Action: <input 
-      type="text" 
-      #action 
-      (keyup.enter)="addTask(action.value, priority.value); action.value=''"
+    Action: <input
+      type="text"
+      #action
+      (keyup.enter)="onAddTask(action.value, priority.value); action.value=''"
       placeholder="Enter action">
-    
-    <button (click)="reset()">Reset</button>
+
+    <button (click)="onReset()">Reset</button>
 
     <h5>High Priority Tasks</h5>
     <ul>
