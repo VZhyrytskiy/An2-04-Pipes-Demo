@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-key-value-pipe',
-  templateUrl: './key-value-pipe.component.html',
-  styleUrls: ['./key-value-pipe.component.css']
+  templateUrl: './key-value-pipe.component.html'
 })
 export class KeyValuePipeComponent {
   rows = {
@@ -13,7 +12,7 @@ export class KeyValuePipeComponent {
 
   rowsMap = new Map([['a', 1], ['b', 2]]);
 
-  compareFn(a, b) {
+  compareFn(a: any, b: any) {
     if (a.key > b.key) {
       return -1;
     }

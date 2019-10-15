@@ -4,5 +4,5 @@
 		<li *ngFor="let message of messages">{{message}}</li>
 	</ul>
 	<div>{{ messages.length | i18nPlural: messageMapping }}</div>
-	<button (click)="add()">Add message</button>
+	<button (click)="onAdd()">Add message</button>
 </details>

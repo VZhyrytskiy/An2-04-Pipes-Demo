@@ -5,7 +5,6 @@ import { PipeTransform, Pipe } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
   transform(arr: string[], searchValue: string) {
-    console.log('Pipe "Filter" runs.');
     if (!searchValue) {
       return arr;
     }

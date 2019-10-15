@@ -6,12 +6,9 @@ registerLocaleData(localeFr);
 
 @Component({
   selector: 'app-currency-pipe',
-  templateUrl: './currency-pipe.component.html',
-  styleUrls: ['./currency-pipe.component.css']
+  templateUrl: './currency-pipe.component.html'
 })
 export class CurrencyPipeComponent {
-
   a = 0.259;
   b = 1.3495;
-
 }

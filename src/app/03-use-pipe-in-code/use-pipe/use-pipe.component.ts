@@ -12,7 +12,6 @@ registerLocaleData(localeUk);
 @Component({
   selector: 'app-use-pipe',
   templateUrl: './use-pipe.component.html',
-  styleUrls: ['./use-pipe.component.css'],
   providers: [AgePipe]
 })
 export class UsePipeComponent implements OnInit {
@@ -31,7 +30,7 @@ export class UsePipeComponent implements OnInit {
     this.age = 20;
   }
 
-  getAge(person) {
+  private getAge(person: any) {
     this.currentAge = this.agePipe.transform(person.age);
   }
 }

@@ -4,8 +4,7 @@ import { Observable, Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-async-observable-pipe',
-  templateUrl: './async-observable-pipe.component.html',
-  styleUrls: ['./async-observable-pipe.component.css']
+  templateUrl: './async-observable-pipe.component.html'
 })
 export class AsyncObservablePipeComponent {
   // observable
@@ -16,8 +15,8 @@ export class AsyncObservablePipeComponent {
   // promise
   data: Promise<string> = new Promise((resolve, reject) => {
     setTimeout(() => {
-      // resolve('RECEIVED DATA!');
-      reject('Error');
+      resolve('RECEIVED DATA!');
+      // reject('Error');
     }, 5000);
   }).catch(error => error) as Promise<string>;
 }

@@ -15,33 +15,23 @@ import {
   SlicePipeComponent
 } from '.';
 
+const components = [
+  LowerUpperCasePipeComponent,
+  DatePipeComponent,
+  JsonPipeComponent,
+  KeyValuePipeComponent,
+  NumberPipeComponent,
+  CurrencyPipeComponent,
+  PercentPipeComponent,
+  I18nPluralPipeComponent,
+  I18nSelectPipeComponent,
+  SlicePipeComponent,
+  AsyncObservablePipeComponent
+];
+
 @NgModule({
   imports: [CommonModule, FormsModule],
-  declarations: [
-    LowerUpperCasePipeComponent,
-    DatePipeComponent,
-    JsonPipeComponent,
-    KeyValuePipeComponent,
-    NumberPipeComponent,
-    CurrencyPipeComponent,
-    PercentPipeComponent,
-    I18nPluralPipeComponent,
-    I18nSelectPipeComponent,
-    SlicePipeComponent,
-    AsyncObservablePipeComponent
-  ],
-  exports: [
-    LowerUpperCasePipeComponent,
-    DatePipeComponent,
-    JsonPipeComponent,
-    KeyValuePipeComponent,
-    NumberPipeComponent,
-    CurrencyPipeComponent,
-    PercentPipeComponent,
-    I18nPluralPipeComponent,
-    I18nSelectPipeComponent,
-    SlicePipeComponent,
-    AsyncObservablePipeComponent
-  ]
+  declarations: [...components],
+  exports: [...components]
 })
 export class BuiltInPipesModule {}

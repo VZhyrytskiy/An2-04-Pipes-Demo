@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  templateUrl: './list.component.html'
 })
 export class ListComponent {
   tasks: any[] = [
@@ -19,10 +18,10 @@ export class ListComponent {
     }
 
     // mutate array
-    this.tasks.push({ action, priority });
+    // this.tasks.push({ action, priority });
 
     // create new rference
-    // this.tasks = [...this.tasks, { action, priority }];
+    this.tasks = [...this.tasks, { action, priority }];
   }
 
   onReset() {
