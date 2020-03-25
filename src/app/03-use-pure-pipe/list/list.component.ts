@@ -18,10 +18,10 @@ export class ListComponent {
     }
 
     // mutate array
-    // this.tasks.push({ action, priority });
+    this.tasks.push({ action, priority });
 
     // create new rference
-    this.tasks = [...this.tasks, { action, priority }];
+    // this.tasks = [...this.tasks, { action, priority }];
   }
 
   onReset() {

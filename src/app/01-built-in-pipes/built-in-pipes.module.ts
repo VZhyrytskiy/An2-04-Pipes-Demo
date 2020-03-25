@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {
@@ -32,6 +32,7 @@ const components = [
 @NgModule({
   imports: [CommonModule, FormsModule],
   declarations: [...components],
-  exports: [...components]
+  exports: [...components],
+  providers: [{ provide: DEFAULT_CURRENCY_CODE, useValue: 'GBP'}]
 })
 export class BuiltInPipesModule {}
