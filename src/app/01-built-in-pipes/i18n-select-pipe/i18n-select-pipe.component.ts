@@ -18,7 +18,6 @@ export class I18nSelectPipeComponent implements OnInit {
   }
 
   onSetGender(event: any): void {
-    console.log(event);
     this.gender = event.target.value;
   }
 
