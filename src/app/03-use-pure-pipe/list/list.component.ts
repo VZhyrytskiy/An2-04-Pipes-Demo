@@ -20,7 +20,7 @@ export class ListComponent {
     // mutate array
     this.tasks.push({ action, priority });
 
-    // create new rference
+    // create new reference
     // this.tasks = [...this.tasks, { action, priority }];
   }
 
