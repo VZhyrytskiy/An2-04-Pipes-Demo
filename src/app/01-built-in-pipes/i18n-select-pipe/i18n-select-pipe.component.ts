@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class I18nSelectPipeComponent implements OnInit {
   gender = 'male';
-  keys: string[];
-  inviteMap: any = {
+  keys!: string[];
+  inviteMap = {
     male: 'Invite him.',
     female: 'Invite her.',
     other: 'Invite them.'
@@ -17,8 +17,9 @@ export class I18nSelectPipeComponent implements OnInit {
     this.getKeys();
   }
 
-  onSetGender(event: any): void {
-    this.gender = event.target.value;
+  onSetGender(event: Event): void {
+    // TODO: check
+    this.gender = (event.target as HTMLSelectElement).value;
   }
 
   private getKeys() {

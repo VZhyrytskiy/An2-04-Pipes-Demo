@@ -5,13 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './list.component.html'
 })
 export class ListComponent {
-  tasks: any[] = [
+  tasks = [
     { action: 'Task 1', priority: 'High' },
     { action: 'Task 2', priority: 'Normal' },
     { action: 'Task 3', priority: 'Low' }
   ];
 
-  onAddTask(action: string, priority: string) {
+  onAddTask(action: string, priority: string): void {
     action = action.trim();
     if (!action) {
       return;
@@ -24,7 +24,7 @@ export class ListComponent {
     // this.tasks = [...this.tasks, { action, priority }];
   }
 
-  onReset() {
+  onReset(): void {
     this.tasks = [];
   }
 }

@@ -12,7 +12,7 @@ export class KeyValuePipeComponent {
 
   rowsMap = new Map([['a', 1], ['b', 2]]);
 
-  compareFn(a: any, b: any) {
+  compareFn(a: any, b: any): number {
     if (a.key > b.key) {
       return -1;
     }

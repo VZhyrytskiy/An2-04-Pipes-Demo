@@ -6,6 +6,6 @@ import { FormControl } from '@angular/forms';
   templateUrl: './use-pipe-result.component.html',
 })
 export class UsePipeResultComponent {
-  search: string;
+  search = '';
   items = ['Acura', 'BMW', 'Chrysler', 'Dodge', 'Ford'];
 }

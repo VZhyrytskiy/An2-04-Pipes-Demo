@@ -15,22 +15,22 @@ registerLocaleData(localeUk);
   providers: [AgePipe]
 })
 export class UsePipeComponent implements OnInit {
-  currentDay: string = new DatePipe('uk').transform(
+  currentDay = new DatePipe('uk').transform(
     new Date(),
     'MMMM dd, y',
     'uk'
   );
-  currentAge: string;
-  age: number;
+  currentAge!: string;
+  age!: number;
 
   constructor(private agePipe: AgePipe) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getAge({ name: 'Anna', age: 16 });
     this.age = 20;
   }
 
-  private getAge(person: any) {
+  private getAge(person: { name: string; age: number}): void {
     this.currentAge = this.agePipe.transform(person.age);
   }
 }

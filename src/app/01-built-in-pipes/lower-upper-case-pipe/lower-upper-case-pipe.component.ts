@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './lower-upper-case-pipe.component.html'
 })
 export class LowerUpperCasePipeComponent {
-  value: string;
+  value!: string;
 
-  onChange(value: string) {
+  onChange(value: string): void {
     this.value = value;
   }
 }

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class AgePipe implements PipeTransform {
 
-  transform(value: number): any {
+  transform(value: number): string {
     return `${value} years old`;
   }
 

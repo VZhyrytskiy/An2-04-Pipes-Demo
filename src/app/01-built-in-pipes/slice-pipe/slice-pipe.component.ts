@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './slice-pipe.component.html'
 })
 export class SlicePipeComponent {
-  collection: string[] = ['a', 'b', 'c', 'd'];
+  collection = ['a', 'b', 'c', 'd'];
   str = 'abcdefghijklmnopqrstuvwxyz';
 }
