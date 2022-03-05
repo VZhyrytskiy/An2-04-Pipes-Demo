@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import { Observable, Subscriber } from 'rxjs';
+import { Observable, type Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-async-observable-pipe',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, type OnInit } from '@angular/core';
 import { AgePipe } from './../age.pipe';
 import { DatePipe } from '@angular/common';
 
