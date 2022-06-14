@@ -1,4 +1,4 @@
-import { type PipeTransform, Pipe } from '@angular/core';
+import { Pipe, type PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'filter'

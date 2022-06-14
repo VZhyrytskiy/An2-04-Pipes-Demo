@@ -1,6 +1,6 @@
 import { Pipe, type PipeTransform } from '@angular/core';
 
-type Task = {action: string; priority: string};
+type Task = { action: string; priority: string };
 
 @Pipe({
   name: 'priority',

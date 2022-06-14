@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { type KeyValue } from '@angular/common';
 
 @Component({
   selector: 'app-key-value-pipe',
@@ -10,9 +11,9 @@ export class KeyValuePipeComponent {
     a: 1
   };
 
-  rowsMap = new Map([['a', 1], ['b', 2]]);
+  rowsMap = new Map<string, number>([['a', 1], ['b', 2]]);
 
-  compareFn(a: any, b: any): number {
+  compareFn(a: KeyValue<string, number>, b: KeyValue<string, number>): number {
     if (a.key > b.key) {
       return -1;
     }

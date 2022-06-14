@@ -13,7 +13,7 @@ export class I18nSelectPipeComponent implements OnInit {
     other: 'Invite them.'
   };
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getKeys();
   }
 
@@ -22,7 +22,7 @@ export class I18nSelectPipeComponent implements OnInit {
     this.gender = (event.target as HTMLSelectElement).value;
   }
 
-  private getKeys() {
+  private getKeys(): void {
     this.keys = Object.keys(this.inviteMap);
   }
 }
