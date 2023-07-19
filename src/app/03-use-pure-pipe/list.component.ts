@@ -1,8 +1,12 @@
+import { NgForOf } from '@angular/common';
 import { Component } from '@angular/core';
+import { PriorityPipe } from './priority.pipe';
 
 @Component({
   selector: 'app-list',
-  templateUrl: './list.component.html'
+  standalone: true,
+  templateUrl: './list.component.html',
+  imports: [NgForOf, PriorityPipe]
 })
 export class ListComponent {
   tasks = [
@@ -18,10 +22,10 @@ export class ListComponent {
     }
 
     // mutate array
-    this.tasks.push({ action, priority });
+    // this.tasks.push({ action, priority });
 
     // create new reference
-    // this.tasks = [...this.tasks, { action, priority }];
+    this.tasks = [...this.tasks, { action, priority }];
   }
 
   onReset(): void {

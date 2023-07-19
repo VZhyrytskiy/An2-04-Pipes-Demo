@@ -1,16 +1,18 @@
 import { Pipe, type PipeTransform } from '@angular/core';
 
-type Task = { action: string; priority: string };
+interface TaskModel {
+  action: string;
+  priority: string;
+}
 
 @Pipe({
   name: 'priority',
+  standalone: true,
   // pure: false
 })
 export class PriorityPipe implements PipeTransform {
-  transform(tasks: Task[], priority: string): Task[] {
+  transform(tasks: TaskModel[], priorityIn: string): TaskModel[] {
     console.log(`call priority pipe at ${Date.now()}`);
-    return tasks.filter(task => {
-      return task.priority === priority;
-    });
+    return tasks.filter(({ priority }) => priority === priorityIn);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, inject, type OnInit } from '@angular/core';
-import { AgePipe } from './../age.pipe';
+import { AgePipe } from './age.pipe';
 import { DatePipe } from '@angular/common';
 
 // > Using a different locale than the default one (en-US)
