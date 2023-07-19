@@ -1,8 +1,11 @@
+import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-json-pipe',
-  templateUrl: './json-pipe.component.html'
+  standalone: true,
+  templateUrl: './json-pipe.component.html',
+  imports: [JsonPipe]
 })
 export class JsonPipeComponent {
   person = {

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { type KeyValue } from '@angular/common';
+import { KeyValuePipe, type KeyValue, NgForOf, JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-key-value-pipe',
-  templateUrl: './key-value-pipe.component.html'
+  standalone: true,
+  templateUrl: './key-value-pipe.component.html',
+  imports: [KeyValuePipe, JsonPipe, NgForOf]
 })
 export class KeyValuePipeComponent {
   rows = {
@@ -13,7 +15,7 @@ export class KeyValuePipeComponent {
 
   rowsMap = new Map<string, number>([['a', 1], ['b', 2]]);
 
-  compareFn(a: KeyValue<string, number>, b: KeyValue<string, number>): number {
+  compareFn(a: KeyValue<string, number>, b: KeyValue<string, number>): 1 | -1 {
     if (a.key > b.key) {
       return -1;
     }

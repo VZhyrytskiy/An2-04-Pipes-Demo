@@ -1,8 +1,11 @@
+import { DecimalPipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-number-pipe',
-  templateUrl: './number-pipe.component.html'
+  standalone: true,
+  templateUrl: './number-pipe.component.html',
+  imports: [DecimalPipe]
 })
 export class NumberPipeComponent {
   pi = 3.141592;

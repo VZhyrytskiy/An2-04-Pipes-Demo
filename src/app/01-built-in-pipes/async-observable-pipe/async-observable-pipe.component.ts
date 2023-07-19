@@ -1,9 +1,12 @@
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { Observable, type Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-async-observable-pipe',
-  templateUrl: './async-observable-pipe.component.html'
+  standalone: true,
+  templateUrl: './async-observable-pipe.component.html',
+  imports: [AsyncPipe, DatePipe]
 })
 export class AsyncObservablePipeComponent {
   // observable

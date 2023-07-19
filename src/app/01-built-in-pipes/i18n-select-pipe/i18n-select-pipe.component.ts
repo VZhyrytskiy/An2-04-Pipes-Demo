@@ -1,8 +1,11 @@
+import { I18nSelectPipe, NgForOf } from '@angular/common';
 import { Component, type OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-i18n-select-pipe',
-  templateUrl: './i18n-select-pipe.component.html'
+  standalone: true,
+  templateUrl: './i18n-select-pipe.component.html',
+  imports: [NgForOf, I18nSelectPipe]
 })
 export class I18nSelectPipeComponent implements OnInit {
   gender = 'male';
@@ -18,7 +21,6 @@ export class I18nSelectPipeComponent implements OnInit {
   }
 
   onSetGender(event: Event): void {
-    // TODO: check
     this.gender = (event.target as HTMLSelectElement).value;
   }
 
