@@ -1,4 +1,4 @@
-import { Component, type OnInit } from '@angular/core';
+import { Component, inject, type OnInit } from '@angular/core';
 import { AgePipe } from './../age.pipe';
 import { DatePipe } from '@angular/common';
 
@@ -9,10 +9,18 @@ import localeUk from '@angular/common/locales/uk';
 registerLocaleData(localeUk);
 // <
 
+
+interface Person {
+  name: string;
+  age: number;
+}
+
 @Component({
   selector: 'app-use-pipe',
+  standalone: true,
   templateUrl: './use-pipe.component.html',
-  providers: [AgePipe]
+  providers: [AgePipe],
+  imports: [AgePipe]
 })
 export class UsePipeComponent implements OnInit {
   currentDay = new DatePipe('uk').transform(
@@ -23,14 +31,14 @@ export class UsePipeComponent implements OnInit {
   currentAge!: string;
   age!: number;
 
-  constructor(private agePipe: AgePipe) {}
+  private agePipe = inject(AgePipe);
 
   ngOnInit(): void {
     this.getAge({ name: 'Anna', age: 16 });
     this.age = 20;
   }
 
-  private getAge(person: { name: string; age: number}): void {
-    this.currentAge = this.agePipe.transform(person.age);
+  private getAge({ age }: Person): void {
+    this.currentAge = this.agePipe.transform(age);
   }
 }
